@@ -1,0 +1,52 @@
+package program.percabangan;
+import java.util.Scanner;
+public class TugasIfElse {
+    public static void main(String[] args) {        
+        int jumlah;
+        double harga=95000, total, diskon;        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Harga  = "+harga);
+        System.out.print("Jumlah = ");
+        jumlah=sc.nextInt();
+        total=harga*jumlah;
+        System.out.println("Total  = "+total);
+        if(total>100000 && total<=200000){
+            diskon=0.05*total;
+            System.out.println("Diskon = "+diskon);
+            total=total-diskon;
+            System.out.println("Grand Total  = "+total);
+        }else if(total>200000 && total<=300000){
+            diskon=0.1*total;
+            System.out.println("Diskon = "+diskon);
+            total=total-diskon;
+            System.out.println("Grand Total  = "+total);
+        }else if(total>300000 && total<=400000){
+            diskon=0.15*total;
+            System.out.println("Diskon = "+diskon);
+            total=total-diskon;
+            System.out.println("Grand Total  = "+total);
+        }else if(total>400000 && total<=500000){
+            diskon=0.2*total;
+            System.out.println("Diskon = "+diskon);
+            total=total-diskon;
+            System.out.println("Grand Total  = "+total);
+        }else if(total>500000){
+            diskon=0.25*total;
+            System.out.println("Diskon = "+diskon);
+            total=total-diskon;
+            System.out.println("Grand Total  = "+total);
+        }else{
+            System.out.println("Anda Tidak Mendapatkan Diskon");
+        }
+        System.out.println("");
+        double uangDiterima, uangKembalian;
+        System.out.print("Uang Diterima  = ");
+        uangDiterima=sc.nextInt();
+        uangKembalian=uangDiterima-total;
+        if(uangKembalian>0){
+            System.out.println("Uang Kembalian = "+uangKembalian);    
+        }else{
+            System.out.println("Uang Kembalian = Uang Pas");
+        } 
+    }
+}
